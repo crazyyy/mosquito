@@ -10,7 +10,9 @@
 @import 'font_fontawesome';
 @import 'font_ubuntu';
 @import 'font_calibri';
-@import 'flexslider';
+@import 'slick';
+@import 'slick-theme';
+
 
 
 body {
@@ -646,8 +648,6 @@ article {
 }
 .catalog {
   height: 650px;
-.inner {
-}
   h2 {
     float: left;
 
@@ -656,20 +656,20 @@ article {
 
     @extend .greentitle;
   }
-  .slides {
-    display: block;
-    overflow: hidden;
-
-width: 960px;
-margin: 0 auto;
+  .catalog-slides {
     height: 500px;
-    li {
-      display: inline-block;
+    margin: 0 auto;
 
-      width: 300px !important;
+    @extend .clearfix;
+    .catalog-slides-container {
+      display: inline-block;
+      float: left;
+
+      width: 300px;
       height: 500px;
+      margin-right: 33px;
       padding: 30px 20px 0;
-margin: 0 10px;
+
       text-align: center;
 
       border: $base-border;
