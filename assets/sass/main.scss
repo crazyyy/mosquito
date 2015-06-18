@@ -736,6 +736,339 @@ article {
   }
 }
 
+.why-we {
+  height: 950px;
+
+  background-color: #f6f6f5;
+  h2 {
+    font-size: em(30, 16);
+
+    margin: 0 auto 50px;
+    padding-right: 0;
+    padding-left: 0;
+
+    @extend .simpletitle;
+  }
+  ul {
+    position: relative;
+
+    display: block;
+
+    width: 940px;
+    height: 745px;
+    margin: 0 auto;
+
+    background-image: url(../img/why-we.png);
+    background-repeat: no-repeat;
+    background-position: -70px 24px;
+    li {
+      position: absolute;
+
+      width: 300px;
+
+      text-align: left;
+      h4 {
+        font-size: em(20, 16);
+        font-weight: bold;
+
+        margin: 0 0 15px;
+
+        color: $green;
+      }
+      p {
+        line-height: 1.2;
+      }
+      &:nth-child(1),
+      &:nth-child(1),
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 350px;
+      }
+      &:nth-child(3) {
+        top: 500px;
+      }
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        right: 0;
+      }
+      &:nth-child(4) {
+        top: 40px;
+      }
+      &:nth-child(5) {
+        top: 170px;
+      }
+      &:nth-child(6) {
+        top: 305px;
+      }
+      &:nth-child(7) {
+        top: 480px;
+      }
+    }
+  }
+}
+.how-that-works {
+  height: 700px;
+  h2 {
+    margin: 0 auto 100px;
+
+    @extend .greentitle;
+  }
+  .how-that-list {
+    display: block;
+
+    margin: 0 auto 25px;
+    padding: 0 0 15px;
+
+    border-bottom: 1px solid $green;
+    li {
+      position: relative;
+
+      margin: 0 0 10px;
+      padding: 0 20px 0 45px;
+      &:before {
+        font-size: em(24, 16);
+        font-weight: normal;
+
+        position: absolute;
+        top: 0;
+        left: 10px;
+
+        content: '';
+
+        color: $green;
+
+        @extend .dblock;
+        @extend .fa;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  h3 {
+    font-size: em(24, 16);
+    font-weight: bold;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    color: $green;
+  }
+  .u-can-do {
+    display: block;
+
+    height: 270px;
+
+    text-align: center;
+
+    @extend .justify-child;
+    li {
+      display: inline-block;
+
+      width: 300px;
+      margin: 0 15px;
+
+      text-align: center;
+      span {
+        display: block;
+        overflow: hidden;
+
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 18px;
+
+        border: 5px solid #fff;
+        border-radius: 50%;
+        box-shadow: 1px 1px 1px 1px $base-font-color;
+        img {
+          width: 100%;
+          height: 100%;
+
+          border-radius: 50%;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.what-u-get {
+  height: 600px;
+  .inner {
+    height: 600px;
+
+    background-image: url(../img/what-u-ge.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  h2 {
+    margin: 0 auto 85px;
+
+    @extend .simpletitle;
+  }
+  ul {
+    display: block;
+
+    width: 100%;
+    padding: 0 0 0 460px;
+    li {
+      font-size: em(20, 16);
+      line-height: 1;
+
+      position: relative;
+
+      margin: 0 0 25px;
+      padding: 5px 0 5px 60px;
+      &:before {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+
+        @extend .dblock;
+        @include sprite($sprite-what-u-ge-hand);
+      }
+      &:nth-child(4) {
+        font-size: em(18, 16);
+        &:before {
+          top: 15px;
+        }
+      }
+      &:nth-child(5) {
+        &:before {
+          top: 5px;
+        }
+      }
+    }
+  }
+}
+.need-consultation {
+  height: 250px;
+
+  background-color: #f6f6f5;
+  h2 {
+    font-size: em(48, 16);
+
+    margin: 0 auto 10px;
+
+    @extend .simpletitle;
+  }
+  h3 {
+    font-size: em(30, 16);
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+  }
+  button {
+    font-size: em(24, 16);
+    font-weight: bold;
+    font-weight: bold;
+
+    display: block;
+
+    width: 340px;
+    margin: 0 auto;
+  }
+}
+.why-effective {
+  height: 600px;
+  h2 {
+    margin: 0 auto 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @extend .greentitle;
+  }
+  li {
+    font-size: em(16, 16);
+
+    position: relative;
+
+    margin: 0 0 5px;
+    padding: 5px 0 5px 40px;
+    &:before {
+      position: absolute;
+      top: 3px;
+      left: 1px;
+
+      display: block;
+    }
+  }
+  ul {
+    display: block;
+
+    width: 100%;
+    margin: 0 0 35px;
+    padding: 0 0 15px;
+
+    border-bottom: 1px solid $green;
+    li {
+      &:before {
+        font-size: em(28, 16);
+
+        content: '';
+
+        color: $orange;
+
+        @extend .fa;
+      }
+    }
+  }
+  ol {
+    li {
+      &:before {
+        font-size: em(20, 16);
+        font-weight: bold;
+
+        left: 5px;
+
+        color: $green;
+      }
+      &:nth-child(1) {
+        &:before {
+          content: '1';
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: '2';
+        }
+      }
+      &:nth-child(3) {
+        &:before {
+          content: '3';
+        }
+      }
+      &:nth-child(4) {
+        &:before {
+          content: '4';
+        }
+      }
+      &:nth-child(5) {
+        &:before {
+          content: '5';
+        }
+      }
+    }
+  }
+  h3 {
+    font-size: em(24, 16);
+    font-weight: bold;
+
+    margin: 0 0 15px;
+
+    color: $green;
+  }
+}
 
 footer {
   height: $footer;
