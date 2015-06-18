@@ -89,17 +89,107 @@ picture {
 }
 
 header {
-  background-color: $light-gray;
+  height: 150px;
   .logo {
+    position: absolute;
+    top: 22px;
+    left: 0;
+
     display: block;
 
-    width: $width / 10;
+    width: 364px;
+    height: 26px;
     img {
+      width: 100%;
       max-width: 100%;
+      height: 100%;
+    }
+  }
+  h2 {
+    font-size: 1em;
+
+    position: absolute;
+    top: 58px;
+    left: 0;
+
+    width: 280px;
+
+    text-align: left;
+  }
+  .inner {
+    height: 100px;
+  }
+  .phone,
+  .recall {
+    position: absolute;
+    right: 0;
+
+    text-align: right;
+  }
+  .recall {
+    font-size: em(18, 16);
+
+    top: 53px;
+
+    padding-right: 2px;
+
+    text-decoration: underline;
+
+    color: $orange;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .phone {
+    font-family: 'Ubuntu';
+    font-size: em(36, 16);
+    font-weight: normal;
+
+    top: 20px;
+
+    color: #292929;
+    span {
+      font-size: em(30, 36);
+      font-weight: 300;
+
+      color: $green;
+    }
+    &:before {
+      font-weight: bold;
+      line-height: 1.2;
+
+      position: absolute;
+      top: 5px;
+      left: -58px;
+
+      width: 48px;
+      height: 48px;
+
+      content: '';
+      transition: $base-transition;
+      text-align: center;
+
+      color: $green;
+      border: 3px solid $green;
+      border-radius: 50%;
+
+      @extend .fa;
+      @extend .dblock;
+    }
+    &:hover {
+      text-shadow: 2px 2px 2px $base-font-color;
+      &:before,
+      span {
+        color: darken($green, 15%);
+        text-shadow: none;
+      }
     }
   }
 }
 nav {
+  height: 50px;
+
+  background-color: #f6f6f5;
   ul {
     @extend .justify-child;
     @extend .clearfix;
@@ -108,7 +198,31 @@ nav {
     }
   }
   .headnav {
-    width: $width / 5;
+    height: 100%;
+
+    @extend .inner;
+    li {
+      width: 135px;
+      height: 100%;
+      padding: 1em 0 0;
+
+      text-align: center;
+      &:nth-child(5),
+      &:nth-child(2), {
+        width: 162px;
+      }
+      a {
+        font-size: 1em;
+        line-height: 1;
+
+        color: $base-font-color;
+        &:hover {
+          text-decoration: underline;
+
+          color: $action-color;
+        }
+      }
+    }
   }
 }
 
@@ -121,6 +235,49 @@ article {
 .looper {
   @extend .clearfix;
 }
+
+.block-head {
+  height: 550px;
+  h1,
+  h2,
+  h6 {
+    font-weight: bold;
+
+    position: absolute;
+    left: 0;
+
+    width: 615px;
+
+    text-align: left;
+  }
+  h1 {
+    font-size: em(36, 16);
+
+    top: 140px;
+
+    text-transform: uppercase;
+  }
+  h6 {
+    font-size: em(96, 16);
+
+    top: 220px;
+
+    padding-left: 10px;
+
+    color: $green;
+  }
+  h2 {
+    font-size: em(30, 16);
+
+    top: 335px;
+
+    width: 590px;
+    padding-top: 20px;
+
+    border-top: 1px solid $base-font-color;
+  }
+}
+
 
 
 footer {
