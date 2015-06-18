@@ -5,13 +5,13 @@ $heading-font-family: $base-font-family;
 
 // Line height
 $base-line-height: 1.5;
-$heading-line-height: 1.2;
+$heading-line-height: 0.8;
 
 // Other Sizes
 $width: 1000px;
 $footer: 150px;
 $footer_margin: $footer - 2 * $footer;
-$base-border-radius: 3px;
+$base-border-radius: 5px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
