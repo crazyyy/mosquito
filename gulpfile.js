@@ -11,7 +11,7 @@ var gulp = require('gulp'),
   });
 
 /* if work with html == true, else - false */
-var htmlOWp = false,
+var htmlOWp = true,
   wpThemeName = 'wp-framework',
   wpDomain = 'wp-framework.dev';
 
@@ -82,12 +82,12 @@ gulp.task('imagecp', function () {
 // Optimize images
 gulp.task('images', function () {
   return gulp.src(paths.images.srcimg)
-    .pipe(plugins.cache(plugins.imagemin({
+    .pipe(plugins.imagemin({
       progressive: true,
       interlaced: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
-    })))
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
     .pipe(gulp.dest(paths.images.dest))
     .pipe(plugins.size({title: 'images'}));
 });
