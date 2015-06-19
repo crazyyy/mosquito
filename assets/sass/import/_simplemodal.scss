@@ -17,139 +17,101 @@
 /* Container */
 
 #contact-container {
-  text-align: left;
-  width: 490px;
+  width: 500px;
+
+  text-align: center;
   .contact-content {
-    background-color: #fff;
-    color: $base-font-color;
     height: 400px;
-  }
-  h1 {
-    color: #d76300;
-    font-size: 20px;
-    line-height: 20px;
-    margin: 0;
-    padding: 0 0 6px 12px;
-    text-align: left;
+
+    color: $base-font-color;
+    background-color: transparent;
+    form {
+      margin: 0;
+
+      background-color: #fff;
+    }
   }
   .contact-loading {
-    background: url(../img/contact/loading.gif) no-repeat;
+    position: absolute;
+    z-index: 8000;
+
+    width: 54px;
     height: 55px;
     margin: -14px 0 0 190px;
     padding: 0;
-    position: absolute;
-    width: 54px;
-    z-index: 8000;
+
+    background: url(../img/loading.gif) no-repeat;
   }
   .contact-message {
     text-align: center;
   }
   .contact-error {
-    background: #000;
-    border: 2px solid #ccc;
     font-size: 14px;
     font-weight: bold;
     line-height: 18px;
+
+    width: 92%;
     margin: 0 auto;
     padding: 2px;
-    width: 92%;
+
+    color: $orange;
+    border: 2px solid $base-border-color;
+    border-radius: $base-border-radius;
+    background-color: $base-font-color;
   }
   br {
     clear: both;
   }
-  form {
-    margin: 0;
-    padding: 0;
-  }
-  label {
-    clear: left;
-    display: block;
-    float: left;
-    font-weight: bold;
-    padding-right: 4px;
-    text-align: right;
-    width: 100px;
-  }
-  .contact-input {
-    background: #eee;
-    border: 1px solid #fff;
-    font-family: 'Trebuchet MS', Verdana, Arial;
-    float: left;
-    padding: 2px;
-    margin: 2px;
-    width: 300px;
-  }
-  textarea {
-    height: 114px;
-  }
-  .contact-cc {
-    cursor: default;
-    font-size: 14px;
-    vertical-align: top;
-  }
   .contact-top {
-    background-color: #333;
-    height: 13px;
+    height: 1em;
     margin: 0;
     padding: 0;
-    border-radius: 8px 8px 0 0;
+
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    background-color: #fff;
   }
   .contact-bottom {
-    background-color: #333;
-    font-size: 12px;
-    height: 13px;
-    line-height: 12px;
+    font-size: 1em;
+    line-height: 1;
+
+    height: 1em;
+
     text-align: center;
-    border-radius: 0 0 8px 8px;
+
+    border-radius: 0 0 $base-border-radius $base-border-radius;
+    background-color: #fff;
     a {
-      color: #666;
       position: relative;
       top: -4px;
+
       text-decoration: none;
-      &:link, &:active, &:visited {
-        color: #666;
+
+      color: $action-color;
+      &:link,
+      &:active,
+      &:visited {
         position: relative;
         top: -4px;
+
         text-decoration: none;
+
+        color: #666;
       }
       &:hover {
         color: #888;
       }
     }
   }
-  .contact-button {
-    background: #d76300;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    height: 26px;
-    margin: 4px 0 0 4px;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 8px;
-    &:hover {
-      background: #f49000;
-    }
-  }
   a.modal-close {
-    color: #999;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 0;
+
     position: absolute;
+    top: -50px;
+    right: -65px;
+
     text-decoration: none;
-    right: 8px;
-    top: 0px;
-    &:link, &:active, &:visited {
-      color: #999;
-      font-size: 18px;
-      font-weight: bold;
-      position: absolute;
-      text-decoration: none;
-      right: 8px;
-      top: 0px;
-    }
+
+    @include sprite($sprite-modal-close);
     &:hover {
       color: #ccc;
     }

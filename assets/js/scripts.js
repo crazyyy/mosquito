@@ -54,7 +54,9 @@ $(window).scroll(function() {
 
     if (scroll >= 30) {
         $("header").addClass("header-scrolled");
+        $("header").removeClass("header-unscrolled");
     } else {
         $("header").removeClass("header-scrolled");
+        $("header").addClass("header-unscrolled");
     }
 });

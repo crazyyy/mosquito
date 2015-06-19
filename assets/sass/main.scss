@@ -1,10 +1,10 @@
 @import 'import/reset';
 @import 'import/variables';
+@import 'import/mixin.scss';
 @import 'import/buttons';
 @import 'import/forms';
 @import 'import/lists';
 @import 'import/tables';
-@import 'import/mixin.scss';
 @import 'import/wordpress.scss';
 @import 'sprite';
 @import 'font_fontawesome';
@@ -130,13 +130,14 @@ picture {
 }
 .backstage {
   display: block;
+
   width: 100%;
   height: 150px;
 }
 header,
 footer {
-  height: 150px;
   width: 100%;
+  height: 150px;
   .logo {
     position: absolute;
     top: 22px;
@@ -233,6 +234,12 @@ footer {
     }
   }
 }
+header {
+  background-color: #f6f6f5;
+}
+.header-unscrolled {
+  background-color: #fff;
+}
 nav {
   width: 100%;
   height: 50px;
@@ -270,16 +277,20 @@ nav {
           color: $action-color;
         }
         &.active {
-          color: $orange;
           text-decoration: underline;
+
+          color: $orange;
         }
       }
     }
   }
 }
 .header-scrolled {
-  background-color: #f6f6f5;
+  z-index: 555 !important;
+
   height: 90px;
+
+  background-color: #f6f6f5;
   nav {
     height: 30px;
     .headnav {
@@ -290,8 +301,10 @@ nav {
   }
   h2 {
     top: 30px;
+
     width: auto
-;  }
+    ;
+  }
   .logo {
     top: 0;
   }
@@ -514,49 +527,6 @@ article {
     position: absolute;
     top: 90px;
     right: 0;
-
-    width: 500px;
-    padding: 25px 40px;
-
-    text-align: center;
-
-    border: 3px solid $green;
-    border-radius: $base-border-radius;
-    h3 {
-      font-size: em(36, 16);
-      font-weight: normal;
-
-      margin: 0 0 10px;
-
-      color: $green;
-    }
-    p {
-      font-size: em(24, 16);
-      span {
-        font-weight: bold;
-      }
-    }
-    input,
-    button {
-      padding: 16px;
-    }
-    input {
-      font-size: em(24, 16);
-
-      margin: 0 0 10px;
-    }
-    button {
-      font-size: em(24, 16);
-
-      width: 100%;
-
-      background-image: linear-gradient( 90deg, rgb(210,59,18) 0%, rgb(243,69,22) 100%);
-      box-shadow: 0 3px 0 0 rgba(137, 39, 12, 1);
-      &:active {
-        background-image: linear-gradient( 90deg, rgb(243,69,22) 0%, rgb(210,59,18) 100%);
-        box-shadow: 0 3px 0 0 rgba(137, 39, 12, .4);
-      }
-    }
   }
 }
 
