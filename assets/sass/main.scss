@@ -235,6 +235,8 @@ footer {
   }
 }
 header {
+  z-index: 555 !important;
+
   background-color: #f6f6f5;
 }
 .header-unscrolled {
@@ -286,8 +288,6 @@ nav {
   }
 }
 .header-scrolled {
-  z-index: 555 !important;
-
   height: 90px;
 
   background-color: #f6f6f5;

@@ -147,7 +147,7 @@ gulp.task('serve', ['sprite', 'images', 'scripts', 'styles', 'fonts'], function 
       notify: false,
       proxy: wpDomain,
       host: wpDomain,
-      port: 8080
+      port: 8081
     });
 
 

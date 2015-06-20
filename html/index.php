@@ -155,7 +155,7 @@
             <p>1 октенол и 1 липкая лента в комплекте</p>
           </span><!-- descr -->
           <h6>39 900 руб.</h6>
-          <button>В корзину</button>
+          <button>Заказать</button>
         </div>
         <div class="catalog-slides-container">
           <h3>SkeeterVac "Выгодный"</h3>
@@ -167,7 +167,7 @@
             <p>Защита на все лето: 2 октенола и 3 липких ленты в комплекте</p>
           </span><!-- descr -->
           <h6>41 900 руб.</h6>
-          <button>В корзину</button>
+          <button>Заказать</button>
         </div>
         <div class="catalog-slides-container">
           <h3>Октенол (аттрактант)</h3>
@@ -179,7 +179,7 @@
             <p>Ресурс: от 30 до 50 дней</p>
           </span><!-- descr -->
           <h6>1 800 руб.</h6>
-          <button>В корзину</button>
+          <button>Заказать</button>
         </div>
       </div><!-- catalog-slides -->
       </div><!-- /.inner -->
