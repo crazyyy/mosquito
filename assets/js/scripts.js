@@ -16,13 +16,13 @@
 }
 }());
 
-$('input[type=tel]').mask('0 (000) 000-00-00');
-
 $(function () {
-    $('header').stickyNavbar({
+  $('input[type=tel]').mask('0 (000) 000-00-00');
+
+  $('header').stickyNavbar({
     activeClass: "active",          // Class to be added to highlight nav elements
     sectionSelector: "scrollto",    // Class of the section that is interconnected with nav links
-    animDuration: 500,              // Duration of jQuery animation
+    animDuration: 0,              // Duration of jQuery animation
     startAt: 1,                     // Stick the menu at XXXpx from the top of the this() (nav container)
     easing: "linear",               // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
     animateCSS: true,               // AnimateCSS effect on/off
@@ -37,21 +37,15 @@ $(function () {
     stickyModeClass: "sticky",      // Class that will be applied to 'this' in sticky mode
     unstickyModeClass: "unsticky"   // Class that will be applied to 'this' in non-sticky mode
   });
-});
 
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+  $('.catalog-slides').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: 300,
+    autoplay: false,
+    autoplaySpeed: 2000
+  });
 
-    if (scroll >= 30) {
-        $("header").addClass("header-scrolled");
-        $("header").removeClass("header-unscrolled");
-    } else {
-        $("header").removeClass("header-scrolled");
-        $("header").addClass("header-unscrolled");
-    }
-});
-
-$(function() {
   $(".landform").on("submit", function(e) {
     e.preventDefault();
 
@@ -95,4 +89,16 @@ $(function() {
     };
     $(this).removeClass('current-form');
   });
+});
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 30) {
+        $("header").addClass("header-scrolled");
+        $("header").removeClass("header-unscrolled");
+    } else {
+        $("header").removeClass("header-scrolled");
+        $("header").addClass("header-unscrolled");
+    }
 });

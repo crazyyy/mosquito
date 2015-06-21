@@ -465,8 +465,7 @@
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/jquery.stickyNavbar.min.js"></script>
-
-<!--     <script type="text/javascript" src="js/slick.min.js"></script> -->
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/recall.js"></script>
     <script type="text/javascript" src="js/action.js"></script>
