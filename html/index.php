@@ -152,10 +152,20 @@
 
     <article id="catalog" class="catalog scrollto">
       <div class="inner">
-
       <h2>Каталог нашей продукции</h2>
-
       <div class="catalog-slides">
+        <div class="catalog-slides-container">
+          <h3>SkeeterVac "Стартовый"</h3>
+          <span class="image-cat">
+            <img src="img/catalog-1.jpg" height="167" width="113" alt="">
+          </span><!-- image-cat -->
+          <span class="descr">
+            <p>Стартовый комплект</p>
+            <p>1 октенол и 1 липкая лента в комплекте</p>
+          </span><!-- descr -->
+          <h6>39 900 руб.</h6>
+          <button>Заказать</button>
+        </div>
         <div class="catalog-slides-container">
           <h3>SkeeterVac "Стартовый"</h3>
           <span class="image-cat">
@@ -436,7 +446,7 @@
       <h4>г. Новосибирск, ул. Залесского, д. 5</h4>
 
       </div><!-- /.inner -->
-<!--       <iframe height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%B3.%20%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%97%D0%B0%D0%BB%D0%B5%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%20%D0%B4.%205&key=AIzaSyDacqLU9_YxrrJP2PTOWLhqo4ti2tYqiR8"></iframe> -->
+      <iframe height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%B3.%20%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%97%D0%B0%D0%BB%D0%B5%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%20%D0%B4.%205&key=AIzaSyDacqLU9_YxrrJP2PTOWLhqo4ti2tYqiR8"></iframe>
     </article><!-- /.maps -->
 
   </section><!-- /section -->

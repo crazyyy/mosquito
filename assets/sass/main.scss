@@ -10,8 +10,8 @@
 @import 'font_fontawesome';
 @import 'font_ubuntu';
 @import 'font_calibri';
-@import 'slick';
-@import 'slick-theme';
+@import 'import/slick';
+@import 'import/slick-theme';
 @import 'import/simplemodal.scss';
 
 body {
@@ -687,91 +687,90 @@ article {
 .catalog {
   height: 650px;
   h2 {
-    float: left;
-
     width: 100%;
     margin: 0 0 30px;
 
     @extend .greentitle;
   }
-  .catalog-slides {
+.catalog-slides {
+  height: 500px;
+  margin: 0 auto;
+
+  @extend .clearfix;
+  .catalog-slides-container {
+    display: inline-block;
+    float: left;
+
+    width: 300px;
     height: 500px;
-    margin: 0 auto;
+    margin-right: 16px;
+    margin-left: 17px;
+    padding: 30px 20px 0;
 
-    @extend .clearfix;
-    .catalog-slides-container {
-      display: inline-block;
-      float: left;
+    text-align: center;
 
-      width: 300px;
-      height: 500px;
-      margin-right: 33px;
-      padding: 30px 20px 0;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    h3 {
+      font-size: em(24, 16);
+      font-weight: bold;
 
-      text-align: center;
+      margin: 0;
+    }
+    .image-cat {
+      position: relative;
 
-      border: $base-border;
-      border-radius: $base-border-radius;
-      h3 {
-        font-size: em(24, 16);
-        font-weight: bold;
+      display: block;
+      overflow: hidden;
 
-        margin: 0;
-      }
-      .image-cat {
-        position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 10px;
 
-        display: block;
-        overflow: hidden;
+      border-bottom: $base-border;
+      img {
+        max-width: 100%;
+        max-height: 100%;
 
-        width: 250px;
-        height: 250px;
-        margin: 0 auto 10px;
-
-        border-bottom: $base-border;
-        img {
-          max-width: 100%;
-          max-height: 100%;
-
-          @extend .align-center;
-        }
-      }
-      .descr {
-        display: block;
-
-        width: 250px;
-        height: 70px;
-        margin: 0 auto 15px;
-
-        text-align: left;
-
-        color: $green;
-        border-bottom: $base-border;
-        p {
-          font-size: em(14, 16);
-          line-height: 1;
-
-          margin: 0 0 5px;
-          &:before {
-            content: '-  ';
-          }
-        }
-      }
-      h6 {
-        font-family: 'Ubuntu';
-        font-size: em(30, 16);
-        font-weight: 300;
-
-        width: 180px;
-        margin: 0 auto 10px;
-
-        text-align: center;
-      }
-      button {
-        font-weight: bold;
+        @extend .align-center;
       }
     }
+    .descr {
+      display: block;
+
+      width: 250px;
+      height: 70px;
+      margin: 0 auto 15px;
+
+      text-align: left;
+
+      color: $green;
+      border-bottom: $base-border;
+      p {
+        font-size: em(14, 16);
+        line-height: 1;
+
+        margin: 0 0 5px;
+        &:before {
+          content: '-  ';
+        }
+      }
+    }
+    h6 {
+      font-family: 'Ubuntu';
+      font-size: em(30, 16);
+      font-weight: 300;
+
+      width: 180px;
+      margin: 0 auto 10px;
+
+      text-align: center;
+    }
+    button {
+      font-weight: bold;
+    }
   }
+}
 }
 
 .why-we {
