@@ -16,18 +16,7 @@
 }
 }());
 
-$('.tel').mask('0 (000) 000-00-00');
-$('.contact-phone').mask('0 (000) 000-00-00');
-
-// $(document).ready(function(){
-//   $('.catalog-slides').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     variableWidth: 300,
-//     autoplay: false,
-//     autoplaySpeed: 2000
-//   });
-// });
+$('input[type=tel]').mask('0 (000) 000-00-00');
 
 $(function () {
     $('header').stickyNavbar({
@@ -60,4 +49,50 @@ $(window).scroll(function() {
         $("header").removeClass("header-scrolled");
         $("header").addClass("header-unscrolled");
     }
+});
+
+$(function() {
+  $(".landform").on("submit", function(e) {
+    e.preventDefault();
+
+    $(this).addClass('current-form');
+    var currForm = $(this),
+      phone = $.trim( $('.current-form input[name=phone]').val()),
+      name = $.trim( $('.current-form input[name=name]').val()),
+      postData = $(this).serializeArray(),
+      formURL = $(this).attr("action"),
+      thanx = $(".current-form .thanx"),
+      inputName = $(".current-form input[name=name]"),
+      inputPhone = $(".current-form input[name=phone]"),
+      message = $(".current-form .message");
+
+    $(message).fadeIn(200);
+    if (name != null && name.length == 0) {
+      $(message).addClass("message-err").html("Укажите своё имя");
+      $(inputName).addClass('input-error');
+      event.preventDefault();
+    } else if (phone != null && phone.length == 0) {
+      $(inputName).removeClass('input-error');
+      $(message).addClass("message-err").html("Укажите контактный телефон");
+      $(inputPhone).addClass('input-error');
+      event.preventDefault();
+    } else {
+      $(inputPhone).removeClass('input-error');
+      $.ajax({
+        url: formURL,
+        type: 'POST',
+        data: postData,
+        beforeSend: function() {
+          $(message).html("Отправляем...");
+        },
+        success: function(data) {
+          $(message).addClass("message-ok");
+          $(message).html("Успешно отправилось!");
+          $(message).fadeOut(1500);
+          $(thanx).fadeIn(1500);
+        }
+      });
+    };
+    $(this).removeClass('current-form');
+  });
 });

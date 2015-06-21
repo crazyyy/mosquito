@@ -529,7 +529,41 @@ article {
     right: 0;
   }
 }
+.landform {
+  position: relative;
+  .message {
+    font-size: 24px;
 
+    display: none;
+
+    margin: 1em 0 0;
+
+    color: $green;
+    &.message-err {
+      color: $red;
+    }
+    &.message-ok {
+      color: $orange;
+    }
+  }
+  .input-error {
+    border-color: $red;
+  }
+  .thanx {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    padding: 50px 40px;
+
+    background-color: #fff;
+  }
+}
 .how-it-work {
   height: 600px;
   h2 {

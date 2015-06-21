@@ -87,16 +87,33 @@
         <p>Стоимость комплекта: <span class="price">0 руб.</span> <span class="price-old">4900 руб.</span></p>
       </aside><!-- /.block-super-left -->
 
-      <form action="#">
+<!--           <form name="ajaxform" id="ajaxform" action="ajax-form-submit-fisrt.php" method="POST">
+            <span class="label">Ваш телефон:</span>
+            <input type="text" name="phone" placeholder="Введите Ваш телефон*">
+            <span class="privacy">Мы никогда не продаем Ваши контакты другим организациям!</span>
+            <input type="hidden" name="hidden" value="ok">
+            <input type="submit" value="Узнать цену" class="ossemibo tshad" onClick="return smallform(this.form)">
+          </form>
+ -->
+      <form class="landform" action="data/form.php" method="POST">
         <h3>Оставьте заявку</h3>
         <p><span>на бесплатный тест-драйв</span> в течение 14 дней и наш менеджер перезвонит вам в течение 15 минут</p>
-        <input type="text" id="contact-name" class="contact-input" name="name" placeholder="Введите Ваше имя" />
-        <input type="hidden" id="contact-email" class="contact-input" name="email" value="info@net-komaroff.ru" />
-        <input type="tel" id="contact-tel" class="contact-input contact-phone" name="phone" placeholder="Укажие телефон 0 (000) 000-00-00" tabindex="1002" />"
-        <input type="hidden" id="contact-message" class="contact-input" name="message" value="Сообщение с обычной формы"><br/>
-        <button type="submit" class="contact-send contact-button">Отправить</button><br/>
-        <input type="hidden" name="token" value="" . smcf_token($to) . ""/>
+        <input type="text" name="name" placeholder="Введите Ваше имя" />
+        <input type="tel" name="phone" placeholder="Укажие телефон 0 (000) 000-00-00" />
+        <input type="hidden" name="hidden" value="ok">
+        <button>Отправить</button>
+        <h6 class="message">Отправляем...</h6>
+        <div class="thanx">
+          <h4>Благодарим вас за заявку</h4>
+          <p>Менеджер свяжется с вами в ближайшее время. <br>
+          А пока можете:</p>
+          <ul>
+            <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
+            <li>ознакомиться с <a href='#' class='pdf'>инструкцией по применению</a></li>
+          </ul>
+        </div><!-- thanx -->
       </form>
+
 
       </div><!-- /.inner -->
     </article><!-- /.block-super -->
@@ -441,7 +458,7 @@
     <script type="text/javascript" src="js/recall.js"></script>
     <script type="text/javascript" src="js/action.js"></script>
     <script type="text/javascript" src="js/consult.js"></script>
-    <script type="text/javascript" src="js/form.js"></script>
+<!--     <script type="text/javascript" src="js/form.js"></script> -->
 
 
 </body>
