@@ -11,75 +11,31 @@
 jQuery(function ($) {
 	var contact = {
 		message: null,
-		init: function () {
-			$('.recall').click(function (e) {
-				e.preventDefault();
 
-				// load the contact form using ajax
-				$.get("data/recall.php", function(data){
-					// create a modal dialog with the data
-					$(data).modal({
-						closeHTML: "<a href='#' title='Close' class='modal-close'>x</a>",
-						position: ["15%",],
-						overlayId: 'contact-overlay',
-						containerId: 'contact-container',
-						onOpen: contact.open,
-						onShow: contact.show,
-						onClose: contact.close
-					});
-				});
-			});
-		},
-		open: function (dialog) {
-			// dynamically determine height
-			var h = 370;
-
-			var title = $('#contact-container .contact-title').html();
-			$('#contact-container .contact-title').html('Loading...');
-			dialog.overlay.fadeIn(200, function () {
-				dialog.container.fadeIn(200, function () {
-					dialog.data.fadeIn(200, function () {
-						$('#contact-container .contact-content').animate({
-							height: h
-						}, function () {
-							$('#contact-container .contact-title').html(title);
-							$('#contact-container form').fadeIn(200, function () {
-								$('#contact-container #contact-name').focus();
-
-								$('#contact-container .contact-cc').click(function () {
-									var cc = $('#contact-container #contact-cc');
-									cc.is(':checked') ? cc.attr('checked', '') : cc.attr('checked', 'checked');
-								});
-							});
-						});
-					});
-				});
-			});
-		},
 		show: function (dialog) {
-			$('#contact-container .contact-send').click(function (e) {
+			$('.block-super-left .contact-send').click(function (e) {
 				e.preventDefault();
 				// validate form
 				if (contact.validate()) {
-					var msg = $('#contact-container .contact-message');
+					var msg = $('.block-super-left .contact-message');
 					msg.fadeOut(function () {
 						msg.removeClass('contact-error').empty();
 					});
-					$('#contact-container .contact-title').html('Sending...');
-					$('#contact-container form').fadeOut(200);
-					$('#contact-container .contact-content').animate({
+					$('.block-super-left .contact-title').html('Sending...');
+					$('.block-super-left form').fadeOut(200);
+					$('.block-super-left .contact-content').animate({
 						height: '260px'
 					}, function () {
-						$('#contact-container .contact-loading').fadeIn(200, function () {
+						$('.block-super-left .contact-loading').fadeIn(200, function () {
 							$.ajax({
-								url: 'data/recall.php',
-								data: $('#contact-container form').serialize() + '&action=send',
+								url: 'data/form.php',
+								data: $('.block-super-left form').serialize() + '&action=send',
 								type: 'post',
 								cache: false,
 								dataType: 'html',
 								success: function (data) {
-									$('#contact-container .contact-loading').fadeOut(200, function () {
-										$('#contact-container .contact-title').html('Thank you!');
+									$('.block-super-left .contact-loading').fadeOut(200, function () {
+										$('.block-super-left .contact-title').html('Thank you!');
 										msg.html(data).fadeIn(200);
 									});
 								},
@@ -89,8 +45,8 @@ jQuery(function ($) {
 					});
 				}
 				else {
-					if ($('#contact-container .contact-message:visible').length > 0) {
-						var msg = $('#contact-container .contact-message div');
+					if ($('.block-super-left .contact-message:visible').length > 0) {
+						var msg = $('.block-super-left .contact-message div');
 						msg.fadeOut(200, function () {
 							msg.empty();
 							contact.showError();
@@ -98,7 +54,7 @@ jQuery(function ($) {
 						});
 					}
 					else {
-						$('#contact-container .contact-message').animate({
+						$('.block-super-left .contact-message').animate({
 							height: '1px'
 						}, contact.showError);
 					}
@@ -107,10 +63,10 @@ jQuery(function ($) {
 			});
 		},
 		close: function (dialog) {
-			$('#contact-container .contact-message').fadeOut();
-			$('#contact-container .contact-title').html('Goodbye...');
-			$('#contact-container form').fadeOut(200);
-			$('#contact-container .contact-content').animate({
+			$('.block-super-left .contact-message').fadeOut();
+			$('.block-super-left .contact-title').html('Goodbye...');
+			$('.block-super-left form').fadeOut(200);
+			$('.block-super-left .contact-content').animate({
 				height: 40
 			}, function () {
 				dialog.data.fadeOut(200, function () {
@@ -127,11 +83,11 @@ jQuery(function ($) {
 		},
 		validate: function () {
 			contact.message = '';
-			if (!$('#contact-container #contact-name').val()) {
+			if (!$('.block-super-left #contact-name').val()) {
 				contact.message += 'Укажите Ваше Имя. ';
 			}
 
-			var email = $('#contact-container #contact-email').val();
+			var email = $('.block-super-left #contact-email').val();
 			if (!email) {
 				contact.message += 'Email is required. ';
 			}
@@ -141,13 +97,13 @@ jQuery(function ($) {
 				}
 			}
 
-      if (!$('#contact-container #contact-message').val()) {
+      if (!$('.block-super-left #contact-message').val()) {
         contact.message += 'Message is required.';
       }
 
-      var contactPhoneLenght = $('#contact-container .contact-phone').val().length;
+      var contactPhoneLenght = $('.block-super-left .contact-phone').val().length;
       console.log(contactPhoneLenght);
-      if (!$('#contact-container .contact-phone').val()  ||  contactPhoneLenght < 15) {
+      if (!$('.block-super-left .contact-phone').val()  ||  contactPhoneLenght < 15) {
         contact.message += 'Укажите Ваш телефон.';
 
       }
@@ -199,7 +155,7 @@ jQuery(function ($) {
 			return true;
 		},
 		showError: function () {
-			$('#contact-container .contact-message')
+			$('.block-super-left .contact-message')
 				.html($('<div class="contact-error"></div>').append(contact.message))
 				.fadeIn(200);
 		}

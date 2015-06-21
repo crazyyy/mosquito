@@ -25,36 +25,8 @@ $extra = array(
 
 // Process
 $action = isset($_POST["action"]) ? $_POST["action"] : "";
-if (empty($action)) {
-  // Send back the contact form HTML
-  $output = "<div style='display:none'>
-    <div class='contact-content'>
-      <div class='contact-loading' style='display:none'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' width='60' height='36'>
-<circle cx='15' cy='15' r='2' fill='#00a67e'><animate attributeType='XML' attributeName='r' values='2;10;2' dur='1.5s' repeatCount='indefinite' additive='sum' /><animate attributeType='XML' attributeName='cx' values='15;30;15;0;15' dur='1.5s' repeatCount='indefinite' additive='sum' /></circle><circle cx='30' cy='15' r='10' fill='#00a67e'><animate attributeType='XML' attributeName='r' values='1;-8;1' dur='1.5s' repeatCount='indefinite' additive='sum' /><animate attributeType='XML' attributeName='cx' values='0;-15;0;15;0' dur='1.5s' repeatCount='indefinite' additive='sum' /></circle></svg></div>
-      <div class='contact-message' style='display:none'></div>
 
-      <form action='#' style='display:none'>
-        <h3>Оставьте заявку</h3>
-        <p>и мы вам обязательно перезвоним в ближайшее время</p>
-        <input type='text' id='contact-name' class='contact-input' name='name' placeholder='Введите Ваше имя' />
-        <input type='hidden' id='contact-email' class='contact-input' name='email' value='info@net-komaroff.ru' />
-        <input type='tel' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие телефон 0 (000) 000-00-00' tabindex='1002' />";
-
-  $output .= "
-      <input type='hidden' id='contact-message' class='contact-input' name='message' value='Сообщение с формы ПЕРЕЗВОНИТЬ'>
-      <br/>";
-
-  $output .= "
-      <button type='submit' class='contact-send contact-button'>Заказать звонок</button>
-      <br/>
-      <input type='hidden' name='token' value='" . smcf_token($to) . "'/>
-    </form>
-  </div>
-  </div>";
-
-  echo $output;
-}
-else if ($action == "send") {
+if ($action == "send") {
   // Send the email
   $name = isset($_POST["name"]) ? $_POST["name"] : "";
   $email = isset($_POST["email"]) ? $_POST["email"] : "";

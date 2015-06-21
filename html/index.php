@@ -87,12 +87,15 @@
         <p>Стоимость комплекта: <span class="price">0 руб.</span> <span class="price-old">4900 руб.</span></p>
       </aside><!-- /.block-super-left -->
 
-      <form action="">
+      <form action="#">
         <h3>Оставьте заявку</h3>
         <p><span>на бесплатный тест-драйв</span> в течение 14 дней и наш менеджер перезвонит вам в течение 15 минут</p>
-        <input type="text" name="name" placeholder="Введите Ваше имя">
-        <input type="tel" class="tel" name="phone" placeholder="Введите номер телефона">
-        <button>Отправить</button>
+        <input type="text" id="contact-name" class="contact-input" name="name" placeholder="Введите Ваше имя" />
+        <input type="hidden" id="contact-email" class="contact-input" name="email" value="info@net-komaroff.ru" />
+        <input type="tel" id="contact-tel" class="contact-input contact-phone" name="phone" placeholder="Укажие телефон 0 (000) 000-00-00" tabindex="1002" />"
+        <input type="hidden" id="contact-message" class="contact-input" name="message" value="Сообщение с обычной формы"><br/>
+        <button type="submit" class="contact-send contact-button">Отправить</button><br/>
+        <input type="hidden" name="token" value="" . smcf_token($to) . ""/>
       </form>
 
       </div><!-- /.inner -->
