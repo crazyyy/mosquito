@@ -71,7 +71,7 @@ else if ($action == "send") {
   А пока можете:</p>
   <ul>
     <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
-    <li>ознакомиться с <a href='#' class='pdf'>инструкцией по применению</a></li>
+    <li>ознакомиться с <a href='instruction.pdf' target='_blank' class='pdf'>инструкцией по применению</a></li>
   </ul>
   </div>
   <!-- /.thanx -->";
