@@ -29,7 +29,8 @@ if (empty($action)) {
   // Send back the contact form HTML
   $output = "<div style='display:none'>
     <div class='contact-content'>
-      <div class='contact-loading' style='display:none'></div>
+      <div class='contact-loading' style='display:none'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' width='60' height='36'>
+<circle cx='15' cy='15' r='2' fill='#00a67e'><animate attributeType='XML' attributeName='r' values='2;10;2' dur='1.5s' repeatCount='indefinite' additive='sum' /><animate attributeType='XML' attributeName='cx' values='15;30;15;0;15' dur='1.5s' repeatCount='indefinite' additive='sum' /></circle><circle cx='30' cy='15' r='10' fill='#00a67e'><animate attributeType='XML' attributeName='r' values='1;-8;1' dur='1.5s' repeatCount='indefinite' additive='sum' /><animate attributeType='XML' attributeName='cx' values='0;-15;0;15;0' dur='1.5s' repeatCount='indefinite' additive='sum' /></circle></svg></div>
       <div class='contact-message' style='display:none'></div>
 
       <form action='#' style='display:none'>
