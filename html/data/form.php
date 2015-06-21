@@ -14,7 +14,7 @@ date_default_timezone_set('Europe/Moscow');
 
 // User settings
 $to = "crazyyy@gmail.com";
-$subject = "Заказ с посадочной страницы";
+$subject = "Заказ с посадочной страницы (перезвонить)";
 
 // Include extra form fields and/or submitter data?
 // false = do not include
@@ -40,7 +40,7 @@ if (empty($action)) {
         <input type='tel' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие телефон 0 (000) 000-00-00' tabindex='1002' />";
 
   $output .= "
-      <input type='hidden' id='contact-message' class='contact-input' name='message' value='Сообщение с формы #'>
+      <input type='hidden' id='contact-message' class='contact-input' name='message' value='Сообщение с формы ПЕРЕЗВОНИТЬ'>
       <br/>";
 
   $output .= "

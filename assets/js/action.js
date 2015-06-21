@@ -12,11 +12,11 @@ jQuery(function ($) {
 	var contact = {
 		message: null,
 		init: function () {
-			$('#contact-form input.contact, #contact-form a.contact').click(function (e) {
+			$('.action').click(function (e) {
 				e.preventDefault();
 
 				// load the contact form using ajax
-				$.get("data/contact.php", function(data){
+				$.get("data/action.php", function(data){
 					// create a modal dialog with the data
 					$(data).modal({
 						closeHTML: "<a href='#' title='Close' class='modal-close'>x</a>",
@@ -32,13 +32,7 @@ jQuery(function ($) {
 		},
 		open: function (dialog) {
 			// dynamically determine height
-			var h = 280;
-			if ($('#contact-subject').length) {
-				h += 26;
-			}
-			if ($('#contact-cc').length) {
-				h += 22;
-			}
+			var h = 370;
 
 			var title = $('#contact-container .contact-title').html();
 			$('#contact-container .contact-title').html('Loading...');
@@ -74,11 +68,11 @@ jQuery(function ($) {
 					$('#contact-container .contact-title').html('Sending...');
 					$('#contact-container form').fadeOut(200);
 					$('#contact-container .contact-content').animate({
-						height: '80px'
+						height: '260px'
 					}, function () {
 						$('#contact-container .contact-loading').fadeIn(200, function () {
 							$.ajax({
-								url: 'data/contact.php',
+								url: 'data/action.php',
 								data: $('#contact-container form').serialize() + '&action=send',
 								type: 'post',
 								cache: false,
@@ -105,10 +99,10 @@ jQuery(function ($) {
 					}
 					else {
 						$('#contact-container .contact-message').animate({
-							height: '30px'
+							height: '1px'
 						}, contact.showError);
 					}
-					
+
 				}
 			});
 		},
@@ -134,7 +128,7 @@ jQuery(function ($) {
 		validate: function () {
 			contact.message = '';
 			if (!$('#contact-container #contact-name').val()) {
-				contact.message += 'Name is required. ';
+				contact.message += 'Укажите Ваше Имя. ';
 			}
 
 			var email = $('#contact-container #contact-email').val();
@@ -147,9 +141,16 @@ jQuery(function ($) {
 				}
 			}
 
-			if (!$('#contact-container #contact-message').val()) {
-				contact.message += 'Message is required.';
-			}
+      if (!$('#contact-container #contact-message').val()) {
+        contact.message += 'Message is required.';
+      }
+
+      var contactPhoneLenght = $('#contact-container .contact-phone').val().length;
+      console.log(contactPhoneLenght);
+      if (!$('#contact-container .contact-phone').val()  ||  contactPhoneLenght < 15) {
+        contact.message += 'Укажите Ваш телефон.';
+
+      }
 
 			if (contact.message.length > 0) {
 				return false;
@@ -161,7 +162,7 @@ jQuery(function ($) {
 		validateEmail: function (email) {
 			var at = email.lastIndexOf("@");
 
-			// Make sure the at (@) sybmol exists and  
+			// Make sure the at (@) sybmol exists and
 			// it is not the first or last character
 			if (at < 1 || (at + 1) === email.length)
 				return false;
@@ -193,7 +194,7 @@ jQuery(function ($) {
 
 			// Make sure domain contains only valid characters and at least one period
 			if (!/^[-a-zA-Z0-9\.]*$/.test(domain) || domain.indexOf(".") === -1)
-				return false;	
+				return false;
 
 			return true;
 		},
