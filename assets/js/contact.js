@@ -99,7 +99,7 @@ jQuery(function ($) {
 					}
 					else {
 						$('#contact-container .contact-message').animate({
-							height: '30px'
+							height: '1px'
 						}, contact.showError);
 					}
 
@@ -128,7 +128,7 @@ jQuery(function ($) {
 		validate: function () {
 			contact.message = '';
 			if (!$('#contact-container #contact-name').val()) {
-				contact.message += 'Name is required. ';
+				contact.message += 'Укажите Ваше Имя. ';
 			}
 
 			var email = $('#contact-container #contact-email').val();
@@ -141,9 +141,16 @@ jQuery(function ($) {
 				}
 			}
 
-			if (!$('#contact-container #contact-message').val()) {
-				contact.message += 'Message is required.';
-			}
+      if (!$('#contact-container #contact-message').val()) {
+        contact.message += 'Message is required.';
+      }
+
+      var contactPhoneLenght = $('#contact-container .contact-phone').val().length;
+      console.log(contactPhoneLenght);
+      if (!$('#contact-container .contact-phone').val()  ||  contactPhoneLenght < 15) {
+        contact.message += 'Укажите Ваш телефон.';
+
+      }
 
 			if (contact.message.length > 0) {
 				return false;

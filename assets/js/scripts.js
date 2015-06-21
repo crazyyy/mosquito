@@ -17,7 +17,7 @@
 }());
 
 $('.tel').mask('0 (000) 000-00-00');
-$('.contact-phone').mask('0 000 000-00-00');
+$('.contact-phone').mask('0 (000) 000-00-00');
 
 // $(document).ready(function(){
 //   $('.catalog-slides').slick({
