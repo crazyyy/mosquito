@@ -1262,5 +1262,13 @@ footer {
     text-align: right;
   }
 }
+/* Lazy Load XT 1.0.6 | MIT License */
+.lazy-hidden {
+  opacity: 0;
+}
+.lazy-loaded {
+  transition: opacity .3s;
 
+  opacity: 1;
+}
 @import 'import/print';

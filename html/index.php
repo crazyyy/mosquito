@@ -4,20 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Уничтожитель комаров SkeeterVac с бесплатной доставкой по Новосибирску</title>
-
     <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
-    <!-- meta -->
-
     <!-- icons -->
-    <link href="favicon.ico" rel="shortcut icon">
-    <!-- this goes inside the header tag-->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet" type="text/css">
-
-    <!-- css + javascript -->
-    <link rel="stylesheet" href="style.css" media="all">
-    <script type="text/javascript" src="///cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link href="favicon.ico" rel="shortcut icon"><!-- css + javascript -->
+    <link rel="stylesheet" href="css/main.css" media="all">
+    <script async type="text/javascript" src="///cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
 <!-- wrapper -->
@@ -467,10 +459,9 @@
   </div><!-- /.inner -->
 </footer><!-- /footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script async type="text/javascript" src="js/scripts.js"></script>
 
 </body>
 </html>
