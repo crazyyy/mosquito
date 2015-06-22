@@ -149,19 +149,7 @@
         <div class="catalog-slides-container">
           <h3>SkeeterVac "Стартовый"</h3>
           <span class="image-cat">
-            <img src="img/catalog-1.jpg" height="167" width="113" alt="">
-          </span><!-- image-cat -->
-          <span class="descr">
-            <p>Стартовый комплект</p>
-            <p>1 октенол и 1 липкая лента в комплекте</p>
-          </span><!-- descr -->
-          <h6>39 900 руб.</h6>
-          <button>Заказать</button>
-        </div>
-        <div class="catalog-slides-container">
-          <h3>SkeeterVac "Стартовый"</h3>
-          <span class="image-cat">
-            <img src="img/catalog-1.jpg" height="167" width="113" alt="">
+            <img src="img/catalog-1.jpg" alt="">
           </span><!-- image-cat -->
           <span class="descr">
             <p>Стартовый комплект</p>
@@ -173,7 +161,7 @@
         <div class="catalog-slides-container">
           <h3>SkeeterVac "Выгодный"</h3>
           <span class="image-cat">
-            <img src="img/catalog-2.jpg" height="167" width="113" alt="">
+            <img src="img/catalog-2.jpg" alt="">
           </span><!-- image-cat -->
           <span class="descr">
             <p>Самое выгодное предложение сезона!</p>
@@ -185,7 +173,7 @@
         <div class="catalog-slides-container">
           <h3>Октенол (аттрактант)</h3>
           <span class="image-cat">
-            <img src="img/catalog-3.jpg" height="153" width="153" alt="">
+            <img src="img/catalog-3.jpg" alt="">
           </span><!-- image-cat -->
           <span class="descr">
             <p>Эффективность прибора по уничтожению комаров увеличивается в 2,5 - 3 раза!</p>
@@ -194,6 +182,32 @@
           <h6>1 800 руб.</h6>
           <button>Заказать</button>
         </div>
+        <div class="catalog-slides-container catalog-slides-container-stripe">
+          <h3>Липкая лента <br><span>(комплект 2шт.)</span></h3>
+          <span class="image-cat">
+            <img src="img/catalog-4.jpg" alt="">
+          </span><!-- image-cat -->
+          <span class="descr">
+            <p>Делает SkeeterVac более эффективным и в уничтожении комаров и крупных насекомых (таких как оводы и слепни)</p>
+            <p>Ресурс: от 7 до 30 дней</p>
+          </span><!-- descr -->
+          <h6>1 800 руб.</h6>
+          <button>Заказать</button>
+        </div>
+        <div class="catalog-slides-container">
+          <h3>Баллон с газом </h3>
+          <span class="image-cat">
+            <img src="img/catalog-5.jpg" alt="">
+          </span><!-- image-cat -->
+          <span class="descr">
+            <p>Необходим для работы устройства против комаров</p>
+            <p>Ресурс: 27 дней непрерывной работы</p>
+            <p>После выработки  - перезаправляется</p>
+          </span><!-- descr -->
+          <h6>2 900 руб.</h6>
+          <button>Заказать</button>
+        </div>
+
       </div><!-- catalog-slides -->
       </div><!-- /.inner -->
     </article><!-- /.catalog -->
@@ -461,7 +475,7 @@
 
     <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script async type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
 </html>

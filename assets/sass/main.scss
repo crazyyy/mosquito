@@ -345,6 +345,11 @@ article {
 
 .block-head {
   height: 550px;
+
+  background-image: url(../img/bg/block-head.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
   h1,
   h2,
   h6 {
@@ -731,7 +736,22 @@ article {
         font-size: em(24, 16);
         font-weight: bold;
 
+        position: relative;
+
         margin: 0;
+        span {
+          font-size: em(18, 16);
+          font-weight: 300;
+
+          position: absolute;
+          bottom: -24px;
+
+          display: block;
+
+          width: 100%;
+
+          text-align: center;
+        }
       }
       .image-cat {
         position: relative;

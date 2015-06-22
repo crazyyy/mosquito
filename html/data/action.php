@@ -12,6 +12,7 @@
 
 date_default_timezone_set('Europe/Moscow');
 
+// User settings
 // $to = "net.komaroff@mail.ru";
 $to = "crazyyy@gmail.com";
 $subject = "Заказ с посадочной страницы (акция)";
@@ -56,7 +57,6 @@ if (empty($action)) {
 else if ($action == "send") {
   // Send the email
   $name = isset($_POST["name"]) ? $_POST["name"] : "";
-  $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
   $email = isset($_POST["email"]) ? $_POST["email"] : "";
   $message = isset($_POST["message"]) ? $_POST["message"] : "";
   $cc = isset($_POST["cc"]) ? $_POST["cc"] : "";
@@ -91,6 +91,7 @@ function smcf_send($name, $email, $subject, $message, $cc) {
 
   // Filter and validate fields
   $name = smcf_filter($name);
+  $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
   $email = smcf_filter($email);
   if (!smcf_validate_email($email)) {
     $message .= "\n\nBad email: $email";
@@ -102,9 +103,9 @@ function smcf_send($name, $email, $subject, $message, $cc) {
   $body = "Имя: $name\n\n";
   $body .= "Телефон: $phone\n\n";
   $body .= "Форма акционного заказа";
-  $body = wordwrap($body, 70);
   $body .= "\n\nIP: " . $_SERVER["REMOTE_ADDR"];
   $body .= "\n\nUSER AGENT: " . $_SERVER["HTTP_USER_AGENT"];
+  $body = wordwrap($body, 70);
 
   // Build header
   $headers = "From: $email\n";

@@ -9,6 +9,8 @@ var gulp = require('gulp'),
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
   });
+var critical = require('critical').stream;
+
 
 /* if work with html == true, else - false */
 var htmlOWp = true,
@@ -139,6 +141,13 @@ gulp.task('styles', function () {
     .pipe(plugins.if('*.css', plugins.csso()))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(plugins.size({title: 'styles'}));
+});
+
+// Generate & Inline Critical-path CSS
+gulp.task('critical', function () {
+    return gulp.src(basePaths.dest + '*.html')
+        .pipe(critical({base: 'dist/', inline: true, css: [paths.styles.dest + 'main.css']}))
+        .pipe(gulp.dest(basePaths.dest));
 });
 
 gulp.task('serve', ['sprite', 'images', 'scripts', 'styles', 'fonts'], function () {

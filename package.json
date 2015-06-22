@@ -29,6 +29,7 @@
     "run-sequence": "^1.0.2"
   },
   "dependencies": {
+    "critical": "^0.5.7",
     "fontmin": "^0.9.0-alpha-2"
   }
 }
