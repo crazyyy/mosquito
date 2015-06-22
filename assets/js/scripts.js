@@ -122,8 +122,7 @@ if(!(b.options.swipe===!1||"ontouchend"in document&&b.options.swipe===!1||b.opti
 $('.catalog-slides').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
+  autoplay: false
 });
 /*
  * SimpleModal 1.4.4 - jQuery Plugin

@@ -12,8 +12,7 @@
 
 date_default_timezone_set('Europe/Moscow');
 
-// $to = "net.komaroff@mail.ru";
-$to = "crazyyy@gmail.com";
+$to = "net.komaroff@mail.ru";
 $subject = "Заказ с посадочной страницы (зовут консультанта)";
 
 // Include extra form fields and/or submitter data?

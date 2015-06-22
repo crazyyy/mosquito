@@ -2,8 +2,7 @@
 
 date_default_timezone_set('Europe/Moscow');
 // User settings
-// $to = "net.komaroff@mail.ru";
-$to = "crazyyy@gmail.com";
+$to = "net.komaroff@mail.ru";
 $subject = "Заказ с главной посадочной страницы";
 
 if(@$_POST["hidden"])
