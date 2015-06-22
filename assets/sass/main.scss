@@ -1206,6 +1206,16 @@ article {
 
   height: 450px;
   padding: 110px 0 0;
+  &:before {
+    @extend .dblock;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: transparent;
+  }
   h4 {
     font-size: em(30, 16);
     font-weight: 300;
