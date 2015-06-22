@@ -59,7 +59,6 @@ else if ($action == "send") {
   // Send the email
   $name = isset($_POST["name"]) ? $_POST["name"] : "";
   $email = isset($_POST["email"]) ? $_POST["email"] : "";
-  $subject = isset($_POST["subject"]) ? $_POST["subject"] : $subject;
   $message = isset($_POST["message"]) ? $_POST["message"] : "";
   $cc = isset($_POST["cc"]) ? $_POST["cc"] : "";
   $token = isset($_POST["token"]) ? $_POST["token"] : "";
@@ -94,27 +93,19 @@ function smcf_send($name, $email, $subject, $message, $cc) {
   // Filter and validate fields
   $name = smcf_filter($name);
   $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
-  $subject = smcf_filter($subject);
   $email = smcf_filter($email);
   if (!smcf_validate_email($email)) {
-    $subject .= " - invalid email";
     $message .= "\n\nBad email: $email";
     $email = $to;
     $cc = 0; // do not CC "sender"
   }
 
-  // Add additional info to the message
-  if ($extra["ip"]) {
-    $message .= "\n\nIP: " . $_SERVER["REMOTE_ADDR"];
-  }
-  if ($extra["user_agent"]) {
-    $message .= "\n\nUSER AGENT: " . $_SERVER["HTTP_USER_AGENT"];
-  }
-
   // Set and wordwrap message body
-  $body = "From: $name\n\n";
+  $body = "Имя: $name\n\n";
   $body .= "Телефон: $phone\n\n";
   $body .= "Форма с просьбой перезвонить";
+  $body .= "\n\nIP: " . $_SERVER["REMOTE_ADDR"];
+  $body .= "\n\nUSER AGENT: " . $_SERVER["HTTP_USER_AGENT"];
   $body = wordwrap($body, 70);
 
   // Build header
@@ -124,14 +115,6 @@ function smcf_send($name, $email, $subject, $message, $cc) {
   }
   $headers .= "X-Mailer: PHP/SimpleModalContactForm";
 
-  // UTF-8
-  if (function_exists('mb_encode_mimeheader')) {
-    $subject = mb_encode_mimeheader($subject, "UTF-8", "B", "\n");
-  }
-  else {
-    // you need to enable mb_encode_mimeheader or risk
-    // getting emails that are not UTF-8 encoded
-  }
   $headers .= "MIME-Version: 1.0\n";
   $headers .= "Content-type: text/plain; charset=utf-8\n";
   $headers .= "Content-Transfer-Encoding: quoted-printable\n";

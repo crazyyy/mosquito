@@ -470,16 +470,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script type="text/javascript" src="js/jquery.simplemodal.js"></script>
-    <script type="text/javascript" src="js/parallax.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/jquery.stickyNavbar.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/recall.js"></script>
-    <script type="text/javascript" src="js/action.js"></script>
-    <script type="text/javascript" src="js/consult.js"></script>
 
 </body>
 </html>
