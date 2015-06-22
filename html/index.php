@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> </title>
+    <title>Уничтожитель комаров SkeeterVac с бесплатной доставкой по Новосибирску</title>
 
     <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
     <!-- meta -->
@@ -100,7 +100,7 @@
           <p>Менеджер свяжется с вами в ближайшее время. <br>
           А пока можете:</p>
           <ul>
-            <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
+            <li>посмотреть короткое видео <a href='https://www.youtube.com/watch?v=9lhxtPUNP4I' target="_blank" class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
             <li>ознакомиться с <a href='instruction.pdf' target="_blank" class='pdf'>инструкцией по применению</a></li>
           </ul>
         </div><!-- thanx -->
@@ -115,7 +115,7 @@
       <h2>Как устройство SkeeterVac решает проблемы с комарами?</h2>
 
       <figure>
-        <iframe src="" frameborder="0"></iframe>
+        <iframe width="540" height="360" src="https://www.youtube.com/embed/_-h1MkShzBA" frameborder="0" allowfullscreen></iframe>
       </figure>
 
       <aside>
@@ -281,7 +281,7 @@
           <p>Менеджер свяжется с вами в ближайшее время. <br>
           А пока можете:</p>
           <ul>
-            <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
+            <li>посмотреть короткое видео <a  href='https://www.youtube.com/watch?v=9lhxtPUNP4I' target="_blank" class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
             <li>ознакомиться с <a href='instruction.pdf' target="_blank" class='pdf'>инструкцией по применению</a></li>
           </ul>
         </div><!-- thanx -->
@@ -431,7 +431,7 @@
           <p>Менеджер свяжется с вами в ближайшее время. <br>
           А пока можете:</p>
           <ul>
-            <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
+            <li>посмотреть короткое видео <a  href='https://www.youtube.com/watch?v=9lhxtPUNP4I' target="_blank" class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
             <li>ознакомиться с <a href='instruction.pdf' target="_blank" class='pdf'>инструкцией по применению</a></li>
           </ul>
         </div><!-- thanx -->

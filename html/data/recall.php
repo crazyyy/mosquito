@@ -13,6 +13,7 @@
 date_default_timezone_set('Europe/Moscow');
 
 // User settings
+// $to = "net.komaroff@mail.ru";
 $to = "crazyyy@gmail.com";
 $subject = "Заказ с посадочной страницы (перезвонить)";
 
@@ -71,7 +72,7 @@ else if ($action == "send") {
   <p>Менеджер свяжется с вами в ближайшее время. <br>
   А пока можете:</p>
   <ul>
-    <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
+    <li>посмотреть короткое видео <a href='https://www.youtube.com/watch?v=9lhxtPUNP4I' target='_blank' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
     <li>ознакомиться с <a href='instruction.pdf' target='_blank' class='pdf'>инструкцией по применению</a></li>
   </ul>
   </div>
@@ -92,6 +93,7 @@ function smcf_send($name, $email, $subject, $message, $cc) {
 
   // Filter and validate fields
   $name = smcf_filter($name);
+  $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
   $subject = smcf_filter($subject);
   $email = smcf_filter($email);
   if (!smcf_validate_email($email)) {
@@ -111,7 +113,8 @@ function smcf_send($name, $email, $subject, $message, $cc) {
 
   // Set and wordwrap message body
   $body = "From: $name\n\n";
-  $body .= "Message: $message";
+  $body .= "Телефон: $phone\n\n";
+  $body .= "Форма с просьбой перезвонить";
   $body = wordwrap($body, 70);
 
   // Build header

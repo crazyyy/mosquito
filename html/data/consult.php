@@ -12,9 +12,9 @@
 
 date_default_timezone_set('Europe/Moscow');
 
-// User settings
+// $to = "net.komaroff@mail.ru";
 $to = "crazyyy@gmail.com";
-$subject = "Заказ с посадочной страницы";
+$subject = "Заказ с посадочной страницы (зовут консультанта)";
 
 // Include extra form fields and/or submitter data?
 // false = do not include
@@ -57,6 +57,7 @@ if (empty($action)) {
 else if ($action == "send") {
   // Send the email
   $name = isset($_POST["name"]) ? $_POST["name"] : "";
+  $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
   $email = isset($_POST["email"]) ? $_POST["email"] : "";
   $subject = isset($_POST["subject"]) ? $_POST["subject"] : $subject;
   $message = isset($_POST["message"]) ? $_POST["message"] : "";
@@ -71,7 +72,7 @@ else if ($action == "send") {
   <p>Менеджер свяжется с вами в ближайшее время. <br>
   А пока можете:</p>
   <ul>
-    <li>посмотреть короткое видео <a href='#' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
+    <li>посмотреть короткое видео <a href='https://www.youtube.com/watch?v=9lhxtPUNP4I' target='_blank' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
     <li>ознакомиться с <a href='instruction.pdf' target='_blank' class='pdf'>инструкцией по применению</a></li>
   </ul>
   </div>
@@ -111,7 +112,8 @@ function smcf_send($name, $email, $subject, $message, $cc) {
 
   // Set and wordwrap message body
   $body = "From: $name\n\n";
-  $body .= "Message: $message";
+  $body .= "Телефон: $phone\n\n";
+  $body .= "Форма заказа консультанта";
   $body = wordwrap($body, 70);
 
   // Build header
