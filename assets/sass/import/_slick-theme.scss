@@ -59,14 +59,15 @@ $slick-opacity-not-active: .25 !default;
   background: transparent;
   box-shadow: none;
 
-
+  @extend .fa;
   &:before {
-    font-family: $slick-font-family;
-    font-size: 20px;
+    font-size: 45px;
+    font-weight: normal;
     line-height: 1;
 
     width: 50px;
     height: 50px;
+    padding: 0 20px;
 
     opacity: $slick-opacity-default;
     color: $slick-arrow-color;
@@ -77,11 +78,15 @@ $slick-opacity-not-active: .25 !default;
     -moz-osx-font-smoothing: grayscale;
     @extend .fa;
   }
+  &:active,
   &:hover,
   &:focus {
     color: transparent;
     outline: none;
     background: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
     &:before {
       opacity: $slick-opacity-on-hover;
     }
@@ -94,16 +99,18 @@ $slick-opacity-not-active: .25 !default;
 .slick-prev {
   left: -50px;
   &:before {
-    @extend .fa;
     content: $slick-prev-character;
+
+    @extend .fa;
   }
 }
 
 .slick-next {
   right: -50px;
   &:before {
-    @extend .fa;
     content: $slick-next-character;
+
+    @extend .fa;
   }
 }
 
