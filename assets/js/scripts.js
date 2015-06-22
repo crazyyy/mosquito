@@ -19,7 +19,7 @@
 $(window).resize(function() {
   var buttonNext = $('.slick-next'),
     buttonPrev = $('.slick-prev');
-  if ($(window).width() < 1150 || window.innerWidth < 1150 || /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     $(buttonNext).addClass('hidden');
     $(buttonPrev).addClass('hidden');
   } else {
