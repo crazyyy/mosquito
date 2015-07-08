@@ -100,8 +100,10 @@ $slick-opacity-not-active: .25 !default;
 }
 
 .slick-prev {
-  left: -50px;
+  left: 20px;
   &:before {
+    padding: 0 9px;
+
     content: $slick-prev-character;
 
     @extend .fa;
@@ -109,7 +111,7 @@ $slick-opacity-not-active: .25 !default;
 }
 
 .slick-next {
-  right: -50px;
+  right: 18px;
   &:before {
     content: $slick-next-character;
 

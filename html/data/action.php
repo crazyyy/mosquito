@@ -37,7 +37,7 @@ if (empty($action)) {
         <h3>Заказать и получить подарочный комплект</h3>
         <input type='text' id='contact-name' class='contact-input' name='name' placeholder='Введите Ваше имя' />
         <input type='hidden' id='contact-email' class='contact-input' name='email' value='info@net-komaroff.ru' />
-        <input type='tel' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие телефон 0 (000) 000-00-00' tabindex='1002' />";
+        <input type='tel' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие телефон 0 (000) 000-00-00' />";
 
   $output .= "
       <input type='hidden' id='contact-message' class='contact-input' name='message' value='Сообщение с формы #'>
